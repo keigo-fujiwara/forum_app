@@ -1,0 +1,22 @@
+<body>
+    <h1>掲示板</h1>
+    <h2>{{ topic.name }}</h2>
+    <table>
+        <tr>
+            <th>投稿内容</th>
+            <th>投稿日時</th>
+        </tr>
+        {% for message in messages %}
+            <tr>
+                <td>{{ message.content }}</td>
+                <td>{{ message.created_at }}</td>
+            </tr>
+        {% endfor %}
+    </table>
+    <form action="{% url 'forum' topic.name %}" method="POST">
+        {% csrf_token %}
+        <input type="text" name="message">
+        <input type="submit" value="投稿">
+    </form>
+    <a href="{% url 'index' %}">ホームへ</a>
+</body>
