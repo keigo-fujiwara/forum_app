@@ -26,6 +26,6 @@ for model in apps.get_models():
     except Exception as e:
         print(f"[{model_name}] skipped: {e}")
 
-# 保存
-with open("data.json", "w", encoding="utf-8-sig") as f:
+# 保存（UTF-8 BOMなし）
+with open("data.json", "w", encoding="utf-8") as f:
     json.dump(all_data, f, ensure_ascii=False, indent=2)
