@@ -5,7 +5,7 @@ from django.apps import apps
 from django.core import serializers
 
 # Django初期化
-os.environ.setdefault("DJANGO_SETTINGS_MODULE", "polls.settings")  # プロジェクト名に合わせて変更
+os.environ.setdefault("DJANGO_SETTINGS_MODULE", "forum.settings")  # プロジェクト名に合わせて変更
 django.setup()
 
 all_data = []
