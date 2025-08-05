@@ -4,5 +4,5 @@ from django.urls import path, include # include が import されていない場
 # ...
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('forum/', include('main.urls')),
+    path('', include('main.urls')),
 ]
